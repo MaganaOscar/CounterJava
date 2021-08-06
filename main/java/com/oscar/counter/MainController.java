@@ -41,7 +41,7 @@ public class MainController {
 	}
 	
 	@RequestMapping("/reset")
-	public String rest(HttpSession session, Model model) {
+	public String reset(HttpSession session, Model model) {
 		session.setAttribute("count", 0);
 		model.addAttribute("count", session.getAttribute("count"));
 		return "counter.jsp";
